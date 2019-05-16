@@ -1,17 +1,9 @@
-<div id="action-description">
-  <p>This sample demonstrates the default rendering of the Grid with minimum configuration.</p>
-</div>
-<!--
 <div class="control-section">
-  <ejs-grid [dataSource]='data' height='350'>
-      <e-columns>
-          <e-column field='OrderID' headerText='Order ID' width='120' textAlign='Right'></e-column>
-          <e-column field='CustomerName' headerText='Customer Name' width='150'></e-column>
-          <e-column field='OrderDate' headerText='Order Date' width='130' format="yMd" textAlign='Right'></e-column>
-          <e-column field='Freight' headerText='Freight' width='120' format='C2' textAlign='Right'></e-column>
-          <e-column field='ShippedDate' headerText='Shipped Date' width='130' format="yMd" textAlign='Right'></e-column>
-          <e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
+  <ejs-grid [dataSource]='heroes' [allowSorting]="true" height='350'>
+    <e-columns>
+          <e-column field='id' headerText='Hero ID' width='10' textAlign='Right'></e-column>
+          <e-column field='name' headerText='Hero Name' width='80'></e-column>
+          <e-column field='active' headerText='Active' width='60' type="boolean" displayAsCheckBox='true'></e-column>
       </e-columns>
   </ejs-grid>
 </div>
--->

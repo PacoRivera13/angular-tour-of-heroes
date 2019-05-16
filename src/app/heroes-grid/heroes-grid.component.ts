@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HEROES } from '../mock-heroes';
+import { HeroService } from '../hero.service';
+import { Hero } from '../hero';
 
 @Component({
   selector: 'app-heroes-grid',
@@ -8,9 +9,18 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroesGridComponent implements OnInit {
 
-  public data: Object[] = [];
+  heroes : Hero[];
+  
+  constructor(private heroService: HeroService) 
+  {
+  }
 
   ngOnInit() {
-    this.data = HEROES;
+    this.getData();
+  }
+
+  getData(): void{
+    this.heroService.getHeroes()
+      .subscribe(h => this.heroes = h);
   }
 }
